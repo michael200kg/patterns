@@ -1,6 +1,7 @@
 package com.epam.patterns.factory;
 
 public interface IComputer {
+   
    String getMonitor();
    String getStorage();
    String getCpu();

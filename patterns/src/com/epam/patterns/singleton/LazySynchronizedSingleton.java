@@ -2,7 +2,7 @@ package com.epam.patterns.singleton;
 
 public class LazySynchronizedSingleton {
     
-	private volatile LazySynchronizedSingleton INSTANCE;
+	private static volatile LazySynchronizedSingleton INSTANCE;
     
 	public LazySynchronizedSingleton getInstance() {
 		LazySynchronizedSingleton localInstance = INSTANCE;
