@@ -4,7 +4,9 @@ public class ComputerFactory {
    
    IComputer computer;
    
-   public ComputerFactory(ComputerTypes type) {
+   public ComputerFactory() {}
+   
+   IComputer getComputer(ComputerTypes type) {
 	   if(type==ComputerTypes.RICH) {
 		   computer = new RichComputer();
 	   }
@@ -14,9 +16,6 @@ public class ComputerFactory {
 	   else {
 		   computer = new CheapComputer(); 
 	   }
-   }
-   
-   IComputer getComputer() {
 	   return computer;
    }
 }

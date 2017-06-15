@@ -2,9 +2,10 @@ package com.epam.patterns.factory;
 
 public class MainFactory {
    public static void main(String ... args) {
-	   IComputer comp = (new ComputerFactory(ComputerTypes.RICH)).getComputer();
+	   ComputerFactory factory = new ComputerFactory();
+	   IComputer comp = factory.getComputer(ComputerTypes.RICH);
 	   printComputer(comp);
-	   comp = (new ComputerFactory(ComputerTypes.CHEAP)).getComputer();
+	   comp = factory.getComputer(ComputerTypes.CHEAP);
 	   printComputer(comp);  	   
 	   
    }
