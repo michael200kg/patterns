@@ -6,6 +6,6 @@ public class ObserverMain {
 	   CustomObserver co = new CustomObserver(cf);
 	   cf.createComputer(RichComputer.class);
 	   cf.createComputer(CheapComputer.class);
-	   cf.removeObserver(co);
+	   co.unSubscribe();
    }
 }

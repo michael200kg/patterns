@@ -16,5 +16,9 @@ public class CustomObserver implements AbstractObserver {
 		this.subject=subject;
 		subject.addObserver(this);
 	}
-
+    
+	public void unSubscribe(){
+        subject.removeObserver(this);
+        subject = null;
+    }
 }
